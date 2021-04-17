@@ -1,0 +1,52 @@
+<ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar color="dark">
+        <ion-title>Lista de Compras</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="login"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-row class="ion-justify-content-center">
+
+        <img src="assets/carrito.png" width="200px">
+    </ion-row>
+    <ion-list>
+        <ion-item-sliding *ngFor="let list of wishService.lists" #slidingItem>
+            <ion-item detail (click)="selectedList(list)">
+                <ion-label>{{ list.name | uppercase }}</ion-label>
+                <!-- <ion-note slot="end" color="primary">{{ list.items.length }} items</ion-note> -->
+            </ion-item>
+
+            <ion-item-options side="end">
+                <ion-item-option color="danger" (click)="sureDelete( list, slidingItem )">
+                    <ion-icon name="close" slot="icon-only"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+
+            <ion-item-options side="start">
+                <ion-item-option color="primary" (click)="editList( list, slidingItem )">
+                    <ion-icon name="create" slot="icon-only"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+
+        </ion-item-sliding>
+    </ion-list>
+
+    <!-- <app-lists [terminated]="false"></app-lists> -->
+
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addList()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-fab vertical="top" horizontal="end" slot="fixed" color="primary">
+        <ion-fab-button (click)="goToCalculator()">
+            <ion-icon name="calculator-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

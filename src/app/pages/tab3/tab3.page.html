@@ -1,0 +1,56 @@
+<ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar color="dark">
+        <ion-title>
+            Mi Perfil
+        </ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="login"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+    <ion-card>
+        <ion-card-header>
+            <ion-row class="ion-justify-content-center ">
+                <img src="assets/register.png" width="130px">
+            </ion-row>
+            <ion-card-subtitle>mi usuario</ion-card-subtitle>
+            <ion-card-title>{{miUsuario.user?.username}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+
+            <ion-row>
+                <form [formGroup]="userForm" (ngSubmit)="update()">
+                    <ion-row>
+                        <ion-text style="padding: 10px;">Nombre: </ion-text>
+                        <ion-input type="text" name="title" placeholder="nombre de usuario" formControlName="name" value="{{miUsuario.user?.name}}"></ion-input>
+                    </ion-row>
+                    <ion-row>
+                        <ion-text style="padding: 10px;">Apellido: </ion-text>
+
+                        <ion-input type="text" name="title" placeholder="nombre de usuario" formControlName="lastName" value="{{miUsuario.user?.lastName}}"></ion-input>
+
+                    </ion-row>
+                    <ion-row>
+                        <ion-text style="padding: 10px;">Correo electronico: </ion-text>
+                        <ion-input type="text" name="title" placeholder="nombre de usuario" value="{{miUsuario.user?.email}}" disabled></ion-input>
+                    </ion-row>
+
+
+                    <ion-button [disabled]="validar()" expand="block" type=" submit " color="primary ">Editar</ion-button>
+                    <br>
+                    <ion-row class="ion-justify-content-center ">
+                        <a (click)="sureDelete(miUsuario.user?.username)" style="text-decoration: none; color: red;"> Cerrar cuenta</a>
+                    </ion-row>
+                </form>
+
+            </ion-row>
+
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

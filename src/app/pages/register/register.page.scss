@@ -1,0 +1,47 @@
+ion-content {
+    height: 100%!important;
+}
+
+ion-grid {
+    height: 100%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+ion-item {
+    border: none !important;
+}
+
+ion-input {
+    border: solid 1px black;
+    border-radius: 15px;
+    text-align: center;
+}
+
+ion-text {
+    text-align: center;
+}
+
+ion-button {
+    width: 100%;
+}
+
+a {
+    color: #00b5b6;
+}
+
+.text-danger {
+    text-align: start;
+    margin-left: 7px;
+    color: red;
+}
+
+.my-custom-class {
+    --background: #EF177B;
+}

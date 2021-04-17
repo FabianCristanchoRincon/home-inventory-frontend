@@ -1,0 +1,59 @@
+<ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar color="dark">
+        <ion-title>
+            Inventario del hogar
+        </ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="login"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+
+    <div class="alert" *ngIf="noProdcuts ">
+
+        <img src="assets/alert.svg" width="120px">
+        <br>
+        <ion-text style="font-size: 20px; color: #a5a4a4 ;"> Aun no tiene productos</ion-text>
+    </div>
+
+    <div *ngIf="loadProdcuts">
+
+        <ion-card *ngFor="let product of productService.products">
+            <ion-row (click)="mostrar(product.id)" class="ion-justify-content-center ">
+
+                <ion-card-header style="padding: 5px;">
+                    <ion-card-title> {{product.name}} </ion-card-title>
+                </ion-card-header>
+            </ion-row>
+            <ion-card-content>
+                <div class="flex-container">
+                    <div width="120px">
+                        <img src="assets/caja.png" width="120px">
+                    </div>
+                    <div>
+                        <ion-row>
+                            <ion-text> Lista: <a (click)="redirectList(product.list_id)">{{product.list_name}}</a></ion-text>
+                        </ion-row>
+                        <ion-row>
+                            <ion-text> Precio: {{product.price}}</ion-text>
+                        </ion-row>
+                        <ion-row>
+                            <ion-text> Cantidad: {{product.quantity}}</ion-text>
+                        </ion-row>
+                    </div>
+
+                </div>
+                <ion-row>
+                    <ion-text> Descripcion: {{product.description}}</ion-text>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+
+    </div>
+
+
+</ion-content>

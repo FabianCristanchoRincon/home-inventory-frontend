@@ -1,0 +1,46 @@
+<ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar color="dark">
+        <ion-title>
+            Mi Producto
+        </ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="tabs/tab1"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <ion-card>
+        <ion-card-header>
+            <ion-row class="ion-justify-content-center ">
+                <img src="assets/caja.png" width="200px">
+            </ion-row>
+            <br>
+            <ion-row class="ion-justify-content-center ">
+                <ion-card-title>{{product?.name | uppercase}}</ion-card-title>
+
+            </ion-row>
+
+            <ion-row class="ion-justify-content-center ">
+                <ion-card-subtitle (click)="mostrarLista(product.list_id)" style="font-size: 20px;" color="tertiary">{{product?.list_name}}</ion-card-subtitle>
+            </ion-row>
+
+        </ion-card-header>
+        <ion-card-content>
+            <div class="container">
+                <ion-row>
+                    <ion-text style="padding: 10px;">Descripcion: {{product?.description}}</ion-text>
+                </ion-row>
+                <ion-row>
+                    <ion-text style="padding: 10px;">Canridad: {{product?.quantity}}</ion-text>
+                </ion-row>
+                <ion-row>
+                    <ion-text style="padding: 10px;">Precio Unitario: ${{product?.price}} </ion-text>
+                </ion-row>
+                <br>
+            </div>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

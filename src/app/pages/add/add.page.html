@@ -1,0 +1,53 @@
+<ion-header *ngIf="loadList" class="ion-no-border">
+    <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+            <ion-back-button color="light" defaultHref="tabs/tab1"></ion-back-button>
+        </ion-buttons>
+
+        <ion-title>{{ list.name }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="loadList">
+    <ion-list>
+        <div class="ion-text-center">
+            <ion-text color="tertiary">
+                <p>{{ list.description }}</p>
+            </ion-text>
+        </div>
+    </ion-list>
+
+    <ion-row class="ion-justify-content-center">
+        <img src="assets/libretapng.png" width="200px" alt="">
+    </ion-row>
+    <ion-list>
+        <ion-list-header>
+            <ion-label *ngIf="list.products.length > 0">MIS PRODUCTOS</ion-label>
+        </ion-list-header>
+
+        <ion-item-sliding *ngFor="let item of list.products; let i = index;" class="animated fadeInDown" #slidingItem>
+            <ion-item>
+                <ion-checkbox slot="start" [(ngModel)]="item.complete" (ionChange)="changeCheckbox(item)"></ion-checkbox>
+                <ion-label> {{ item.name }} </ion-label>
+            </ion-item>
+            <ion-item-options side="start">
+                <ion-item-option (click)="viewProduct(item.id, slidingItem )" color="success">
+                    <ion-icon slot="icon-only" name="eye-outline"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+            <ion-item-options side="end">
+                <ion-item-option (click)="sureDelete(list.id, item.id, item.name, slidingItem)" color="danger">
+                    <ion-icon slot="icon-only" name="close"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+
+
+    </ion-list>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addProduct()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

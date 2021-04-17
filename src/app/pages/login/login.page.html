@@ -1,0 +1,68 @@
+<ion-content center style="position: relative">
+    <svg style="position: absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path
+      fill="#00cba9"
+      fill-opacity="1"
+      d="M0,128L80,149.3C160,171,320,213,480,234.7C640,256,800,256,960,250.7C1120,245,1280,235,1360,229.3L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+    ></path>
+  </svg>
+
+    <ion-grid>
+        <div class="formulario">
+            <div>
+                <ion-row class="ion-justify-content-center">
+                    <img src="assets/logo.png" width="200px" />
+                </ion-row>
+                <ion-text center>
+                    <h1>HOME INVENTORY</h1>
+                </ion-text>
+            </div>
+            <br />
+            <br />
+            <ion-row class="ion-justify-content-center">
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+                    <ion-input type="text" name="title" placeholder="nombre de usuario" formControlName="username"></ion-input>
+                    <div class="text-danger" *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched">
+                        <span>El nombre de usuario <strong>es requerido</strong></span>
+                    </div>
+                    <div class="text-danger" *ngIf="loginForm.get('username')?.hasError('pattern') && loginForm.get('username')?.touched">
+                        <span>Mínimo <strong>4</strong> caracteres de longitud</span>
+                    </div>
+                    <br>
+                    <ion-input type="password" name="description" placeholder="contraseña" formControlName="password"></ion-input>
+                    <div class="text-danger" *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+                        <span>La contraseña <strong>es requerida</strong></span>
+                    </div>
+                    <div class="text-danger" *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched">
+                        <span>Mínimo <strong>5 caracteres de longitud</strong></span>
+                    </div>
+                    <br>
+                    <ion-button [disabled]="loginForm.invalid" type="submit" color="primary">Iniciar sesión</ion-button>
+                </form>
+            </ion-row>
+            <br />
+            <ion-row class="ion-justify-content-center">
+                <ion-text>
+                    <p>No tienes una cuenta? <span><a routerLink="/register">Regístrate</a></span></p>
+                </ion-text>
+            </ion-row>
+
+            <ion-row>
+
+                <a routerLink="/about">
+                    <ion-icon style="font-size: 40px;" name="information-circle-outline">
+                    </ion-icon>
+                </a>
+            </ion-row>
+        </div>
+    </ion-grid>
+
+    <svg style="position: absolute; bottom: 0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path
+      fill="#00cba9"
+      fill-opacity="1"
+      d="M0,96L80,96C160,96,320,96,480,90.7C640,85,800,75,960,58.7C1120,43,1280,21,1360,10.7L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+    ></path>
+  </svg>
+</ion-content>
