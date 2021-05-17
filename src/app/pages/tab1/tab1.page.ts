@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, IonItemSliding } from '@ionic/angular';
 import { List } from 'src/app/models/list.model';
@@ -186,9 +186,9 @@ export class Tab1Page implements OnInit{
             list.name = data.name;
             list.description = data.description;
             this.wishService.editList(list.id, list.name, list.description)
-            .subscribe((data:any)=>{
-              if(data.ok){
-                this.successEdit(data.message);
+            .subscribe((dataAlert:any)=>{
+              if(dataAlert.ok){
+                this.successEdit(dataAlert.message);
                 slidingItem.close();
               }
             });

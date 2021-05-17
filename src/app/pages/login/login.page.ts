@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NavController, AlertController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 import { UserService } from '../../services/user.service';
 import { WishService } from '../../services/list.service';
 import { Storage } from "@ionic/storage"

@@ -33,13 +33,9 @@ export class Tab3Page implements OnInit {
 
     this.userForm = this.fb.group({
       //  email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
-        name: [, [Validators.required, Validators.minLength(4)]],
-        lastName: [, [Validators.required, Validators.minLength(5)]],
+        name: ['', [Validators.required, Validators.minLength(4)]],
+        lastName: ['', [Validators.required, Validators.minLength(5)]],
       });
-
-   
-    
-    
   }
 
   ngOnInit() {

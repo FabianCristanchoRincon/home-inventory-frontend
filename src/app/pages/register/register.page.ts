@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController, AlertController } from '@ionic/angular';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/User';

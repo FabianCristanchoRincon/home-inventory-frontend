@@ -1,10 +1,9 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage'
 import { RouterTestingModule } from "@angular/router/testing";
-// import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab2Page } from './tab2.page';
 

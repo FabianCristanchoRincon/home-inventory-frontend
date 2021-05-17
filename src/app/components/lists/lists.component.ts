@@ -1,6 +1,6 @@
-import { Component, Input, OnInit, ViewChild } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Router } from "@angular/router";
-import { AlertController, IonItemSliding, IonList } from "@ionic/angular";
+import { AlertController, IonItemSliding } from "@ionic/angular";
 import { List } from "src/app/models/list.model";
 import { WishService } from "src/app/services/list.service";
 

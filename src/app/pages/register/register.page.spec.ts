@@ -3,7 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage'
 import { UserService } from 'src/app/services/user.service';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, UrlSerializer } from "@angular/router";
+import { RouterModule } from "@angular/router";
 import { RouterTestingModule } from "@angular/router/testing";
 
 

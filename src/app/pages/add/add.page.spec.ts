@@ -7,7 +7,6 @@ import { RouterTestingModule } from "@angular/router/testing";
 import { AddPage } from './add.page';
 
 describe('AddPage', () => {
-  let component: AddPage;
   let fixture: ComponentFixture<AddPage>;
 
   beforeEach(waitForAsync(() => {
@@ -17,7 +16,6 @@ describe('AddPage', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(AddPage);
-    component = fixture.componentInstance;
     fixture.detectChanges();
   }));
 

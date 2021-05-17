@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from "@angular/core";
 import { List } from "../models/list.model";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Storage } from '@ionic/storage';
 import { header } from '../../environments/environment';
 import { environment } from '../../environments/environment';

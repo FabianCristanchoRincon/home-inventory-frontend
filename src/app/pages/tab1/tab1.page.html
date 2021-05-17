@@ -17,7 +17,6 @@
         <ion-item-sliding *ngFor="let list of wishService.lists" #slidingItem>
             <ion-item detail (click)="selectedList(list)">
                 <ion-label>{{ list.name | uppercase }}</ion-label>
-                <!-- <ion-note slot="end" color="primary">{{ list.items.length }} items</ion-note> -->
             </ion-item>
 
             <ion-item-options side="end">
@@ -34,9 +33,6 @@
 
         </ion-item-sliding>
     </ion-list>
-
-    <!-- <app-lists [terminated]="false"></app-lists> -->
-
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button (click)="addList()">
