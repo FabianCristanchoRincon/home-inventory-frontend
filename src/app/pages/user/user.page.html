@@ -7,13 +7,13 @@
     <ion-card>
         <ion-item>
             <ion-avatar class="item" item-start size="large">
-                <img src="assets/register.png">
+                <img src="assets/register.png" alt="register">
             </ion-avatar>
             <h2>Pepito Perez</h2>
             <!-- <p>November 5, 1955</p> -->
         </ion-item>
 
-        <img src="assets/logo.png" />
+        <img src="assets/logo.png" alt="logo" />
 
         <ion-card-content>
             <p>
@@ -22,27 +22,27 @@
         </ion-card-content>
 
         <ion-row>
-            <ion-col>
+            <ion-col class="ion-col">
                 <button ion-button color="primary" clear block icon-start>
         <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
         <ion-icon name="trash"></ion-icon>
         Delete
       </button>
             </ion-col>
-            <ion-col>
+            <ion-col class="ion-col">
                 <button ion-button size="large" color="primary" clear icon-start>
         <ion-icon name="build"></ion-icon>
         Edit
       </button>
             </ion-col>
-            <ion-col align-self-center text-center>
+            <ion-col class="ion-col" align-self-center text-center>
             </ion-col>
         </ion-row>
     </ion-card>
 </ion-content>
 
 <style>
-    .social-cards ion-col {
+    .social-cards .ion-col {
         padding: 0;
     }
 </style>

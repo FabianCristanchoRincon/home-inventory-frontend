@@ -14,7 +14,7 @@
     <ion-card>
         <ion-card-header>
             <ion-row class="ion-justify-content-center ">
-                <img src="assets/caja.png" width="200px">
+                <img src="assets/caja.png" alt="caja" width="200px">
             </ion-row>
             <br>
             <ion-row class="ion-justify-content-center ">
@@ -23,7 +23,7 @@
             </ion-row>
 
             <ion-row class="ion-justify-content-center ">
-                <ion-card-subtitle (click)="mostrarLista(product.list_id)" style="font-size: 20px;" color="tertiary">{{product?.list_name}}</ion-card-subtitle>
+                <ion-card-subtitle class="ion-card-subtitle" (click)="mostrarLista(product.list_id)" style="font-size: 20px;" color="tertiary">{{product?.list_name}}</ion-card-subtitle>
             </ion-row>
 
         </ion-card-header>

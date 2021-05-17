@@ -1,4 +1,4 @@
-<ion-content center style="position: relative">
+<ion-content class="ion-content" center style="position: relative">
     <svg style="position: absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path
       fill="#00cba9"
@@ -7,20 +7,20 @@
     ></path>
   </svg>
 
-    <ion-grid>
+    <ion-grid class="ion-grid">
         <div class="formulario">
             <div>
                 <ion-row class="ion-justify-content-center">
-                    <img src="assets/register.png" width="80px" />
+                    <img src="assets/register.png" class="register" width="80px" />
                 </ion-row>
-                <ion-text center>
+                <ion-text class="ion-text" center>
                     <h1>REGISTRO DE USUARIO</h1>
                 </ion-text>
             </div>
             <br />
             <ion-row class="ion-justify-content-center">
                 <form [formGroup]="registerForm" (ngSubmit)="register()">
-                    <ion-input type="text" name="nameUser" placeholder="Nombre" formControlName="name"></ion-input>
+                    <ion-input class="ion-input" type="text" name="nameUser" placeholder="Nombre" formControlName="name"></ion-input>
                     <div class="text-danger" *ngIf="registerForm.get('name')?.hasError('required') && registerForm.get('name')?.touched">
                         <span>El nombre <strong>es requerido</strong></span>
                     </div>
@@ -28,7 +28,7 @@
                         <span>Mínimo <strong>3 caracteres de longitud</strong></span>
                     </div>
                     <br>
-                    <ion-input type="text" name="lastNameUser" placeholder="Apellido" formControlName="lastName"></ion-input>
+                    <ion-input class="ion-input" type="text" name="lastNameUser" placeholder="Apellido" formControlName="lastName"></ion-input>
                     <div class="text-danger" *ngIf="registerForm.get('lastName')?.hasError('required') && registerForm.get('lastName')?.touched">
                         <span>El apellido <strong>es requerido</strong></span>
                     </div>
@@ -36,7 +36,7 @@
                         <span>Mínimo <strong>3 caracteres de longitud</strong></span>
                     </div>
                     <br>
-                    <ion-input type="email" name="email" placeholder="Correo" formControlName="email"></ion-input>
+                    <ion-input class="ion-input" type="email" name="email" placeholder="Correo" formControlName="email"></ion-input>
                     <div class="text-danger" *ngIf="registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched">
                         <span>El email <strong>es requerido</strong></span>
                     </div>
@@ -44,7 +44,7 @@
                         <span>Mínimo <strong>3 caracteres de longitud</strong></span>
                     </div>
                     <br>
-                    <ion-input type="username" name="username" placeholder="Nombre de usuario" formControlName="username"></ion-input>
+                    <ion-input class="ion-input" type="username" name="username" placeholder="Nombre de usuario" formControlName="username"></ion-input>
                     <div class="text-danger" *ngIf="registerForm.get('username')?.hasError('required') && registerForm.get('username')?.touched">
                         <span>El nombre de usuario <strong>es requerido</strong></span>
                     </div>
@@ -52,7 +52,7 @@
                         <span>Mínimo <strong>5 caracteres de longitud</strong></span>
                     </div>
                     <br>
-                    <ion-input type="password" name="description" placeholder="Contraseña" formControlName="password"></ion-input>
+                    <ion-input class="ion-input" type="password" name="description" placeholder="Contraseña" formControlName="password"></ion-input>
                     <div class="text-danger" *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched">
                         <span>La contraseña <strong>es requerida</strong></span>
                     </div>
@@ -60,11 +60,11 @@
                         <span>Mínimo <strong>5 caracteres de longitud</strong></span>
                     </div>
                     <br>
-                    <ion-button type="submit" [disabled]="registerForm.invalid" color="primary"> Registrarse </ion-button>
+                    <ion-button class="ion-button" type="submit" [disabled]="registerForm.invalid" color="primary"> Registrarse </ion-button>
                 </form>
             </ion-row>
             <ion-row class="ion-justify-content-center">
-                <ion-text>
+                <ion-text class="ion-text">
                     <p> ya tienes una cuenta? <span><a routerLink="/login">Iniciar sesión</a></span></p>
                 </ion-text>
             </ion-row>

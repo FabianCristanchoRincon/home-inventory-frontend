@@ -1,8 +1,8 @@
-ion-content {
+.ion-content {
     height: 100%!important;
 }
 
-ion-grid {
+.ion-grid {
     height: 100%;
 }
 
@@ -14,21 +14,21 @@ ion-grid {
     height: 100%;
 }
 
-ion-item {
+.ion-item {
     border: none !important;
 }
 
-ion-input {
+.ion-input {
     border: solid 1px black;
     border-radius: 15px;
     text-align: center;
 }
 
-ion-text {
+.ion-text {
     text-align: center;
 }
 
-ion-button {
+.ion-button {
     width: 100%;
 }
 

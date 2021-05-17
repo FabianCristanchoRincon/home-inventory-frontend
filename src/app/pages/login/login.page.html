@@ -1,4 +1,4 @@
-<ion-content center style="position: relative">
+<ion-content center style="position: relative" class="ion-content">
     <svg style="position: absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path
       fill="#00cba9"
@@ -7,11 +7,11 @@
     ></path>
   </svg>
 
-    <ion-grid>
+    <ion-grid class="ion-grid">
         <div class="formulario">
             <div>
                 <ion-row class="ion-justify-content-center">
-                    <img src="assets/logo.png" width="200px" />
+                    <img src="assets/logo.png" alt="logo" width="200px" />
                 </ion-row>
                 <ion-text center>
                     <h1>HOME INVENTORY</h1>
@@ -22,7 +22,7 @@
             <ion-row class="ion-justify-content-center">
                 <form [formGroup]="loginForm" (ngSubmit)="login()">
 
-                    <ion-input type="text" name="title" placeholder="nombre de usuario" formControlName="username"></ion-input>
+                    <ion-input class="ion-input" type="text" name="title" placeholder="nombre de usuario" formControlName="username"></ion-input>
                     <div class="text-danger" *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched">
                         <span>El nombre de usuario <strong>es requerido</strong></span>
                     </div>
@@ -30,7 +30,7 @@
                         <span>Mínimo <strong>4</strong> caracteres de longitud</span>
                     </div>
                     <br>
-                    <ion-input type="password" name="description" placeholder="contraseña" formControlName="password"></ion-input>
+                    <ion-input class="ion-input" type="password" name="description" placeholder="contraseña" formControlName="password"></ion-input>
                     <div class="text-danger" *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
                         <span>La contraseña <strong>es requerida</strong></span>
                     </div>
@@ -38,7 +38,7 @@
                         <span>Mínimo <strong>5 caracteres de longitud</strong></span>
                     </div>
                     <br>
-                    <ion-button [disabled]="loginForm.invalid" type="submit" color="primary">Iniciar sesión</ion-button>
+                    <ion-button [disabled]="loginForm.invalid" type="submit" color="primary" class="ion-button">Iniciar sesión</ion-button>
                 </form>
             </ion-row>
             <br />
