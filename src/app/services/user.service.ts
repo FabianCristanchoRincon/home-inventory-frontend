@@ -52,10 +52,14 @@ export class UserService {
         resolve => (
           this.http.post(`${this.baseUrl}/create`, data )
           .subscribe( res => {
-            resolve(res)
+            console.log(res)
+            if (res['ok']) {
+              resolve(res)
+            } else {
+              resolve(res)
+            }
           })
       ));
-      
   }
 
   deleteUser( token: string): Observable<any> {
