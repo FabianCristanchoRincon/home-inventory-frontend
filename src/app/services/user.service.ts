@@ -53,11 +53,7 @@ export class UserService {
           this.http.post(`${this.baseUrl}/create`, data )
           .subscribe( res => {
             console.log(res)
-            if (res['ok']) {
-              resolve(res)
-            } else {
-              resolve(res)
-            }
+            resolve(res)
           })
       ));
   }
