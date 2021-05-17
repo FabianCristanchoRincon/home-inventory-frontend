@@ -108,12 +108,12 @@ export class AddPage implements OnInit {
                 this.listId
               )
               .subscribe(async (product: any) => {
-                const alert = await this.alertCtrl.create({
-                  cssClass: "alert",
-                  header: product.message,
-                  buttons: ["OK"],
-                });
-                alert.present();
+                // const alert = await this.alertCtrl.create({
+                //   cssClass: "alert",
+                //   header: product.message,
+                //   buttons: ["OK"],
+                // });
+                // alert.present();
                 setTimeout(() => {
                   window.location.href = `/tabs/tab1/add/${this.listId}`;
                 }, 500);
