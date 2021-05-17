@@ -55,6 +55,7 @@ export class UserService {
             resolve(res)
           })
       ));
+      
   }
 
   deleteUser( token: string): Observable<any> {
